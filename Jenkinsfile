@@ -11,7 +11,7 @@ node {
   withEnv(['AZURE_SUBSCRIPTION_ID=d4e53310-d7ea-4386-8e45-a6f2f328f977',
         'AZURE_TENANT_ID=e4e34038-ea1f-4882-b6e8-ccd776459ca0']) {
     stage('init') {
-       git(url: 'https://github.com/vaideek/javawebappsample', branch: 'main') 
+       checkout scm
     }
   
     stage('build') {
